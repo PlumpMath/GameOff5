@@ -26,8 +26,11 @@ public class PlayerGrabItem : MonoBehaviour {
             if (!hasItem)
             {
                 Physics2D.queriesStartInColliders = false;
-                hit = Physics2D.Raycast(transform.position, Vector2.right * transform.localScale.x, distance, grabLayerMask);
-                Debug.DrawRay(transform.position, Vector2.right * transform.localScale.x, Color.green);
+                //hit = Physics2D.Raycast(transform.position, Vector2.right * transform.localScale.x, distance, grabLayerMask);
+                //Vector2 circleCastOrigin = new Vector2(transform.position.x + (distance * transform.localScale.x), transform.position.y);
+                hit = Physics2D.CircleCast(transform.position, 2, Vector2.right * transform.localScale.x, distance, grabLayerMask);
+                
+                //Debug.DrawRay(transform.position, Vector2.right * transform.localScale.x, Color.green);
                 if (hit)
                 {
                     Debug.Log("Hit something!");
@@ -54,7 +57,7 @@ public class PlayerGrabItem : MonoBehaviour {
 
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, transform.position +Vector3.right * transform.localScale.x*distance);
+        //Gizmos.color = Color.green;
+        //Gizmos.DrawLine(transform.position, transform.position +Vector3.right * transform.localScale.x*distance);
     }
 }
