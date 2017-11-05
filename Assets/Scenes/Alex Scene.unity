@@ -698,8 +698,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ac7d20be22301429d1a94017c67f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 0.3
-  throwForce: 10
+  distance: 2
+  throwForce: 2
   grabPoint: {fileID: 131790376}
 --- !u!1 &1713375732
 GameObject:
