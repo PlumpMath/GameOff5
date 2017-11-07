@@ -37,7 +37,7 @@ public class EggBehavior : MonoBehaviour {
     void determineWalkDirection()
     {
         // Each frame, egg has a 1% chance to change direction
-        float random = Random.Range(0, 100);
+        float random = Random.Range(0, 100); 
         if (random <= 1)
         {
             eggSpeed *= -1;
