@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         if (moveHorizontal != 0)
-            rigidBody.velocity = (new Vector2(moveHorizontal * moveSpeed, rigidBody.velocity.y));
+            rigidBody.velocity = new Vector2(moveHorizontal * moveSpeed, rigidBody.velocity.y);
     }
 
     void checkForJump()
