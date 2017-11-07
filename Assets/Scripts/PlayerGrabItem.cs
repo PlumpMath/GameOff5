@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerGrabItem : MonoBehaviour {
 
-    public float distance = 2f;
+    public float distance = 0.4f;
+    public float grabRadius = 0.5f;
     public float throwForce = 2f;
     public Transform grabPoint;
 
@@ -25,12 +26,11 @@ public class PlayerGrabItem : MonoBehaviour {
             Debug.Log("Grab button pushed");
             if (!hasItem)
             {
-                Physics2D.queriesStartInColliders = false;
-                //hit = Physics2D.Raycast(transform.position, Vector2.right * transform.localScale.x, distance, grabLayerMask);
-                //Vector2 circleCastOrigin = new Vector2(transform.position.x + (distance * transform.localScale.x), transform.position.y);
-                hit = Physics2D.CircleCast(transform.position, 2, Vector2.right * transform.localScale.x, distance, grabLayerMask);
-                
-                //Debug.DrawRay(transform.position, Vector2.right * transform.localScale.x, Color.green);
+                Physics2D.queriesStartInColliders = true;
+                Vector2 circleCastDirection = Vector2.right * transform.localScale.x;
+                circleCastDirection.Normalize();
+                hit = Physics2D.CircleCast(transform.position, 1f, circleCastDirection, distance, grabLayerMask);
+
                 if (hit)
                 {
                     Debug.Log("Hit something!");

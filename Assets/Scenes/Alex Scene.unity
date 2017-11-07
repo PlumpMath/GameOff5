@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 864322507}
   - component: {fileID: 864322506}
   - component: {fileID: 864322505}
+  - component: {fileID: 864322510}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -419,6 +420,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &864322510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864322504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009b0a0ed7dae3c4ca49cd39b6a2d877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 20
+  smooth: 0.5
+  target: {fileID: 1485629461}
 --- !u!1 &998503214
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,9 +795,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9774953401abde740a9f50aebfe1157c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 150
+  jumpForce: 190
   fallMultiplier: 2.5
-  lowJumpMultiplier: 2
+  lowJumpMultiplier: 3
   moveSpeed: 10
 --- !u!114 &1485629465
 MonoBehaviour:
@@ -795,7 +810,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ac7d20be22301429d1a94017c67f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 2
+  distance: 0.4
+  grabRadius: 0.5
   throwForce: 2
   grabPoint: {fileID: 131790376}
 --- !u!1 &1672142703

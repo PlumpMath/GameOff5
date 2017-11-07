@@ -86,10 +86,14 @@ public class PlayerController : MonoBehaviour {
 
     void checkForFlip()
     {
-        if (rigidBody.velocity.x > 0 && !facingRight || rigidBody.velocity.x < 0 && facingRight)
+        if (Input.GetAxis("Horizontal") != 0)
         {
-            flipPlayer();
+            if (rigidBody.velocity.x > 0 && !facingRight || rigidBody.velocity.x < 0 && facingRight)
+            {
+                flipPlayer();
+            }
         }
+      
     }
 
     void flipPlayer()
