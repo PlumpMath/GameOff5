@@ -5,8 +5,9 @@ using UnityEngine;
 public class EggBehavior : MonoBehaviour {
 
     public float timeTillWalk = 5.0f;
-    public float eggSpeed = 2f;
-    public float launchSpeed = 5f;
+    public float timeTillHatch = 5.0f;
+    public float eggSpeed = 2.0f;
+    public float launchSpeed = 5.0f;
 
     private Rigidbody2D rigidBody;
     private bool walking = false;
@@ -69,6 +70,18 @@ public class EggBehavior : MonoBehaviour {
     {
         yield return new WaitForSeconds(timeTillWalk);
         startWalking();
+        StartCoroutine(WaitToHatch());
+    }
+
+    IEnumerator WaitToHatch()
+    {
+        yield return new WaitForSeconds(timeTillHatch);
+        Hatch();
+    }
+
+    void Hatch()
+    {
+
     }
 
     void startWalking()
