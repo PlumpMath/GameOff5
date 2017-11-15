@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour {
 	
 	void Update () {
         applyFallMultiplier();
-        checkForFlip();
     }
 
     void FixedUpdate()
@@ -36,7 +35,18 @@ public class PlayerController : MonoBehaviour {
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         if (moveHorizontal != 0)
+        {
             rigidBody.velocity = new Vector2(moveHorizontal * moveSpeed, rigidBody.velocity.y);
+            flipPlayer(moveHorizontal);
+        }
+    }
+
+    void flipPlayer(float moveHorizontal)
+    {
+        if (moveHorizontal < 0)
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        else
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
     }
 
     void checkForJump()
@@ -84,21 +94,4 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void checkForFlip()
-    {
-        if (Input.GetAxis("Horizontal") != 0)
-        {
-            if (rigidBody.velocity.x > 0 && !facingRight || rigidBody.velocity.x < 0 && facingRight)
-            {
-                flipPlayer();
-            }
-        }
-      
-    }
-
-    void flipPlayer()
-    {
-        facingRight = !facingRight;
-        transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-    }
 }

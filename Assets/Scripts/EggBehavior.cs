@@ -6,6 +6,7 @@ public class EggBehavior : MonoBehaviour {
 
     public float timeTillWalk = 5.0f;
     public float eggSpeed = 2f;
+    public float launchSpeed = 5f;
 
     private Rigidbody2D rigidBody;
     private bool walking = false;
@@ -17,6 +18,11 @@ public class EggBehavior : MonoBehaviour {
     {
         rigidBody = GetComponent<Rigidbody2D>();
         groundLayerMask = LayerMask.GetMask("Ground");
+        float launchXDirection = Random.Range(1, 10);
+        float launchYDirection = Random.Range(1, 10);
+        Vector2 launchDirection = new Vector2(launchXDirection, launchYDirection);
+        launchDirection.Normalize();
+        rigidBody.AddForce(launchDirection * launchSpeed);
         StartCoroutine(Incubate());
     }
 
