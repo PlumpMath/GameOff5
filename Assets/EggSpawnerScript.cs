@@ -7,7 +7,7 @@ public class EggSpawnerScript : MonoBehaviour {
 
     public GameObject Egg;
     float randx;
-    Vector2 whereToSpawn;
+    Vector2 whereToSpawn; 
     public float spawnRate = 2f;
     float nextSpawn = 0.0f;
 	// Use this for initialization
