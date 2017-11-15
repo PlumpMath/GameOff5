@@ -21,8 +21,9 @@ public class EggSpawnerScript : MonoBehaviour {
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
-            randx = Random.Range(-8.4f, 8.4f);
-            whereToSpawn = new Vector2(randx, transform.position.y);
+            //randx = Random.Range(-8.4f, 8.4f);
+            //whereToSpawn = new Vector2(randx, transform.position.y);
+            whereToSpawn = new Vector2(transform.position.x, transform.position.y);
             Instantiate(Egg, whereToSpawn, Quaternion.identity);
         }
 	}
