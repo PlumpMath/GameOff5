@@ -21,10 +21,10 @@ public class EggBehavior : MonoBehaviour {
         groundLayerMask = LayerMask.GetMask("Ground");
         float launchXDirection = Random.Range(1, 10);
         float launchYDirection = Random.Range(1, 10);
-        Vector2 launchDirection = new Vector2(launchXDirection, launchYDirection);
+        Vector2 launchDirection = new Vector2(-launchXDirection, launchYDirection);
         launchDirection.Normalize();
         rigidBody.AddForce(launchDirection * launchSpeed);
-        StartCoroutine(Incubate());
+        //StartCoroutine(Incubate());
     }
 
     void Update ()
