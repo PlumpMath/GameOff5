@@ -25,7 +25,6 @@ public class PlayerGrabItem : MonoBehaviour {
     {
         if (Input.GetButtonDown("Grab"))
         {
-            Debug.Log("Grab button pushed");
             if (!hasItem)
             {
                 grabItem();
