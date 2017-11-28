@@ -5,9 +5,10 @@ using UnityEngine;
 public class EggBehavior : MonoBehaviour {
 
     public float timeTillWalk = 5.0f;
-    public float timeTillHatch = 5.0f;
+    public float timeTillHatch = 10.0f;
     public float eggSpeed = 2.0f;
     public float launchSpeed = 5.0f;
+    public GameObject eggSplatter;
 
     private Rigidbody2D rigidBody;
     private bool walking = false;
@@ -24,7 +25,7 @@ public class EggBehavior : MonoBehaviour {
         Vector2 launchDirection = new Vector2(-launchXDirection, launchYDirection);
         launchDirection.Normalize();
         rigidBody.AddForce(launchDirection * launchSpeed);
-        //StartCoroutine(Incubate());
+        StartCoroutine(Incubate());
     }
 
     void Update ()
@@ -70,7 +71,7 @@ public class EggBehavior : MonoBehaviour {
     {
         yield return new WaitForSeconds(timeTillWalk);
         startWalking();
-        StartCoroutine(WaitToHatch());
+         StartCoroutine(WaitToHatch());
     }
 
     IEnumerator WaitToHatch()
@@ -81,9 +82,10 @@ public class EggBehavior : MonoBehaviour {
 
     void Hatch()
     {
-
+        Instantiate(eggSplatter, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
-
+    
     void startWalking()
     {
         walking = true;
