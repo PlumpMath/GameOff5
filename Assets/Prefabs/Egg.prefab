@@ -114,7 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTillWalk: 5
+  timeTillHatch: 5
   eggSpeed: 2
+  launchSpeed: 500
 --- !u!212 &212695122394585616
 SpriteRenderer:
   m_ObjectHideFlags: 1
