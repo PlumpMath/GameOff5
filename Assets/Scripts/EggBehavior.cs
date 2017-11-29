@@ -12,6 +12,7 @@ public class EggBehavior : MonoBehaviour {
     private Rigidbody2D rigidBody;
     private bool walking = false;
     private bool onGround = true;
+    private bool canBeDestroyed = false;
     private LayerMask groundLayerMask;
 
 
@@ -24,7 +25,7 @@ public class EggBehavior : MonoBehaviour {
         Vector2 launchDirection = new Vector2(-launchXDirection, launchYDirection);
         launchDirection.Normalize();
         rigidBody.AddForce(launchDirection * launchSpeed);
-        //StartCoroutine(Incubate());
+        StartCoroutine(Incubate());
     }
 
     void Update ()
@@ -86,6 +87,19 @@ public class EggBehavior : MonoBehaviour {
     void startWalking()
     {
         walking = true;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (canBeDestroyed)
+        {
+            DestroyObject(this.gameObject);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        canBeDestroyed = true;
     }
 
 
