@@ -207,6 +207,48 @@ Transform:
   m_Father: {fileID: 1485629461}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &152630958
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6.841
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.489
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &317988219
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,8 +739,8 @@ MonoBehaviour:
   velocity: 20
   smooth: 0.5
   Max_X: 4
-  Min_X: 0
-  Min_Y: -1.36
+  Min_X: 0.33
+  Min_Y: -1.31
   target: {fileID: 1485629461}
 --- !u!1 &952877367
 GameObject:
@@ -1131,7 +1173,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

@@ -5,12 +5,16 @@ using UnityEngine;
 public class AlienBehavior : MonoBehaviour {
 
     public float speed;
+    public float flySpeed;
+    public float timeTillFly;
+    public GameObject eggSplatter;
 
     private GameObject player;
     private Rigidbody2D playerRb;
     private Rigidbody2D rigidBody;
     private Transform playerTransform;
     private LayerMask alienLayerMask;
+    private bool flying = false;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +23,7 @@ public class AlienBehavior : MonoBehaviour {
         playerRb = player.GetComponent<Rigidbody2D>();
         playerTransform = player.GetComponent<Transform>();
         alienLayerMask = LayerMask.GetMask("Alien");
+        StartCoroutine(FlyAway());
     }
 
     // Update is called once per frame
@@ -30,23 +35,23 @@ public class AlienBehavior : MonoBehaviour {
 
         Vector2 forward = Vector2.down * 0.5f;
         Debug.DrawLine(playerRb.position, playerRb.position + forward, Color.green);
-        if (hit2D)
-        {
-            Debug.Log("hit");
-        }
         if (hit2D.rigidbody == rigidBody)
         {
-            Debug.Log("hit");
-        }
-        if (hit2D.rigidbody == rigidBody)
-        {
+            Instantiate(eggSplatter, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }
 
     void FixedUpdate()
     {
-        rigidBody.velocity = new Vector2(speed, rigidBody.velocity.y);
+        if (flying)
+        {
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, flySpeed);
+        }
+        else
+        {
+            rigidBody.velocity = new Vector2(speed, rigidBody.velocity.y);
+        }
     }
 
     void determineWalkDirection()
@@ -57,6 +62,12 @@ public class AlienBehavior : MonoBehaviour {
         {
             speed *= -1;
         }
+    }
+
+    IEnumerator FlyAway()
+    {
+        yield return new WaitForSeconds(timeTillFly);
+        flying = true;
     }
 
     void OnDrawGizmos()
