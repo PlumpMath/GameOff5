@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PortalTrigger : MonoBehaviour {
+public class DestroyEggParticle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Destroy(gameObject, 2f);
 		
 	}
 	
@@ -13,11 +14,4 @@ public class PortalTrigger : MonoBehaviour {
 	void Update () {
 		
 	}
-
-    void onTriggerEnter2D(Collider other)
-    {
-        Debug.Log("enter trigger");
-            Destroy(other.gameObject);
-       
-    }
 }
