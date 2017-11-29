@@ -31,6 +31,7 @@ public class PlayerGrabItem : MonoBehaviour {
             }
             else
             {
+                SoundManagerScript.PlaySound("grunt");
                 throwItem();
             }
         }
@@ -58,11 +59,13 @@ public class PlayerGrabItem : MonoBehaviour {
 
     void throwItem()
     {
+       
         hasItem = false;
         Rigidbody2D itemRigidBody = hit.collider.gameObject.GetComponent<Rigidbody2D>();
         if (itemRigidBody != null)
         {
             itemRigidBody.velocity = new Vector2(transform.localScale.x, 1.5f) * (throwForce + (playerRigidBody.velocity.x * transform.localScale.x * 0.02f));
+            
         }
     }
 

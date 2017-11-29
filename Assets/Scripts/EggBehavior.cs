@@ -82,6 +82,7 @@ public class EggBehavior : MonoBehaviour {
     void Hatch()
     {
         Instantiate(eggSplatter, transform.position, Quaternion.identity);
+        SoundManagerScript.PlaySound("pop");
         Destroy(gameObject);
     }
     

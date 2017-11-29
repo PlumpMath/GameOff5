@@ -17,7 +17,8 @@ public class PortalTrigger : MonoBehaviour {
     void onTriggerEnter2D(Collider other)
     {
         Debug.Log("enter trigger");
-            Destroy(other.gameObject);
+        SoundManagerScript.PlaySound("portal");
+        Destroy(other.gameObject);
        
     }
 }
