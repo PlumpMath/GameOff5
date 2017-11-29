@@ -64,7 +64,6 @@ public class EggBehavior : MonoBehaviour {
             onGround = false;
         }
 
-        Debug.Log(onGround);
     }
 
     IEnumerator Incubate()

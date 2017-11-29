@@ -3576,7 +3576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Egg: {fileID: 1331734070872560, guid: cd4966ad31f23d242856653aca03f1b0, type: 2}
-  spawnRate: 10
+  spawnRate: 2
 --- !u!61 &798818364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3667,7 +3667,7 @@ GameObject:
   - component: {fileID: 867300726}
   - component: {fileID: 867300725}
   - component: {fileID: 867300727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tempGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
