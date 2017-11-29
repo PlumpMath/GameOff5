@@ -862,6 +862,7 @@ GameObject:
   - component: {fileID: 1041836655}
   - component: {fileID: 1041836654}
   - component: {fileID: 1041836657}
+  - component: {fileID: 1041836658}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -953,7 +954,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Egg: {fileID: 1331734070872560, guid: cd4966ad31f23d242856653aca03f1b0, type: 2}
-  spawnRate: 2
+  spawnRate: 0.9
+--- !u!61 &1041836658
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1041836653}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.020771503, y: -0.031157494}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1800001, y: 4.52}
+    newSize: {x: 1.1800001, y: 4.52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.43222904, y: 3.7099152}
+  m_EdgeRadius: 0
 --- !u!1001 &1143225378
 Prefab:
   m_ObjectHideFlags: 0
@@ -993,6 +1019,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1446728835183378, guid: bb3c52f3bc8357040a76d7bb666f6fb0, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb3c52f3bc8357040a76d7bb666f6fb0, type: 2}
   m_IsPrefabParent: 0
@@ -1012,7 +1042,7 @@ GameObject:
   - component: {fileID: 1485629465}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1101,7 +1131,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

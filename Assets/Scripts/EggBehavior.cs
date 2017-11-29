@@ -9,6 +9,7 @@ public class EggBehavior : MonoBehaviour {
     public float eggSpeed = 2.0f;
     public float launchSpeed = 5.0f;
     public GameObject eggSplatter;
+    public GameObject alien;
 
     private Rigidbody2D rigidBody;
     private bool walking = false;
@@ -83,6 +84,7 @@ public class EggBehavior : MonoBehaviour {
     void Hatch()
     {
         Instantiate(eggSplatter, transform.position, Quaternion.identity);
+        Instantiate(alien, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
     

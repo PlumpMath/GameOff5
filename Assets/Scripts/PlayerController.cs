@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour {
     private bool onGround = true;
     private LayerMask groundLayerMask;
     private bool facingRight = true;
+    private LayerMask alienLayerMask;
 
-	void Start () {
+    void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
         groundLayerMask = LayerMask.GetMask("Ground");
+        alienLayerMask = LayerMask.GetMask("Alien");
     }
 	
 	void Update () {
@@ -71,7 +73,8 @@ public class PlayerController : MonoBehaviour {
         if (rigidBody.velocity.y <= 0)
         {
             RaycastHit2D hit2D = Physics2D.Raycast(rigidBody.position, Vector2.down, 1.2f, groundLayerMask);
-            if (hit2D)
+            RaycastHit2D hit2DAlien = Physics2D.Raycast(rigidBody.position, Vector2.down, 1.2f, alienLayerMask);
+            if (hit2D || hit2DAlien)
             {
                 onGround = true;
             }
