@@ -113,10 +113,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b7c36d02515854e8c5f2a9bbe67930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeTillWalk: 5
-  timeTillHatch: 5
+  timeTillWalk: 6
+  timeTillHatch: 15
   eggSpeed: 2
   launchSpeed: 500
+  eggSplatter: {fileID: 1402588181175762, guid: b03e0c206e869dd4f8737876e939f207,
+    type: 2}
 --- !u!212 &212695122394585616
 SpriteRenderer:
   m_ObjectHideFlags: 1
