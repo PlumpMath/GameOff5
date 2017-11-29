@@ -10,6 +10,7 @@ public class EggSpawnerScript : MonoBehaviour {
     Vector2 whereToSpawn; 
     public float spawnRate = 2f;
     float nextSpawn = 0.0f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -20,11 +21,23 @@ public class EggSpawnerScript : MonoBehaviour {
 		
         if (Time.time > nextSpawn)
         {
+            if (Random.Range(0,100) <= 80)
+            {
+                spawnEgg();
+            }
             nextSpawn = Time.time + spawnRate;
-            //randx = Random.Range(-8.4f, 8.4f);
-            //whereToSpawn = new Vector2(randx, transform.position.y);
-            whereToSpawn = new Vector2(transform.position.x, transform.position.y);
-            Instantiate(Egg, whereToSpawn, Quaternion.identity);
+
         }
 	}
+
+    void FixedUpdate()
+    {
+        spawnRate -= 0.00005f;
+    }
+
+    void spawnEgg()
+    {
+        whereToSpawn = new Vector2(transform.position.x, transform.position.y);
+        Instantiate(Egg, whereToSpawn, Quaternion.identity);
+    }
 }
