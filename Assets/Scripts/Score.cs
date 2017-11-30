@@ -6,6 +6,7 @@ public class Score : MonoBehaviour {
 
     public int AliensEscaped;
     public int EggsThrownBack;
+    public int AliensKilled;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +28,12 @@ public class Score : MonoBehaviour {
     {
         EggsThrownBack++;
         Debug.Log(EggsThrownBack);
+    }
+
+    public void AlienKilled()
+    {
+        AliensKilled++;
+        Debug.Log(AliensKilled);
     }
 
 }

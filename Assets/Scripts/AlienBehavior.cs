@@ -42,6 +42,7 @@ public class AlienBehavior : MonoBehaviour {
         if (hit2D.rigidbody == rigidBody)
         {
             Instantiate(eggSplatter, transform.position, Quaternion.identity);
+            score.AlienKilled();
             SoundManagerScript.PlaySound("squish");
             Destroy(this.gameObject);
         }
