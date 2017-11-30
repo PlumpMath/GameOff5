@@ -39,6 +39,5 @@ public class EggSpawnerScript : MonoBehaviour {
     {
         whereToSpawn = new Vector2(transform.position.x, transform.position.y);
         Instantiate(Egg, whereToSpawn, Quaternion.identity);
-        SoundManagerScript.PlaySound("portal");
     }
 }

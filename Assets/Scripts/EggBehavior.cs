@@ -99,6 +99,7 @@ public class EggBehavior : MonoBehaviour {
     {
         if (canBeDestroyed)
         {
+            SoundManagerScript.PlaySound("portal");
             DestroyObject(this.gameObject);
         }
     }
