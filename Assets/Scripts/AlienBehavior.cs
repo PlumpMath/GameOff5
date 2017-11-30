@@ -9,16 +9,20 @@ public class AlienBehavior : MonoBehaviour {
     public float timeTillFly;
     public GameObject eggSplatter;
 
+    private Score score;
+    private GameObject gameMaster;
     private GameObject player;
     private Rigidbody2D playerRb;
     private Rigidbody2D rigidBody;
     private Transform playerTransform;
     private LayerMask alienLayerMask;
     private bool flying = false;
-
+    
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
+        gameMaster = GameObject.FindGameObjectWithTag("GameMaster");
+        score = gameMaster.GetComponent<Score>();
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         playerRb = player.GetComponent<Rigidbody2D>();
         playerTransform = player.GetComponent<Transform>();
@@ -48,6 +52,11 @@ public class AlienBehavior : MonoBehaviour {
         if (flying)
         {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, flySpeed);
+            if (rigidBody.position.y > 12)
+            {
+                score.AlienEscaped();
+                Destroy(this.gameObject);
+            }
         }
         else
         {

@@ -244,8 +244,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 114745751096066114, guid: ce18b82be3a39414ba670a643b13d105,
+        type: 2}
+      propertyPath: gameMaster
+      value: 
+      objectReference: {fileID: 407232079}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
   m_IsPrefabParent: 0
@@ -329,9 +334,10 @@ GameObject:
   m_Component:
   - component: {fileID: 407232081}
   - component: {fileID: 407232080}
+  - component: {fileID: 407232082}
   m_Layer: 0
   m_Name: GameMaster
-  m_TagString: Untagged
+  m_TagString: GameMaster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -368,6 +374,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &407232082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 407232079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31d0b2d3bd6e6740ab8f6ed181e4703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AliensEscaped: 0
+  EggsThrownBack: 0
 --- !u!1 &562289166
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +839,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1041721638
 GameObject:
@@ -1059,7 +1078,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4259763057026296, guid: cda979a49ed21e94b9eb8c16bcee18ac, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cda979a49ed21e94b9eb8c16bcee18ac, type: 2}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EggBehavior : MonoBehaviour {
 
     public float timeTillWalk = 5.0f;
@@ -17,6 +18,7 @@ public class EggBehavior : MonoBehaviour {
     private bool onGround = true;
     private LayerMask groundLayerMask;
     private bool canBeDestroyed;
+    private Score score;
 
     void Start()
     {
@@ -29,6 +31,8 @@ public class EggBehavior : MonoBehaviour {
         float randForce = Random.Range(minLaunchSpeed, maxLaunchSpeed);
         rigidBody.AddForce(launchDirection * randForce);
         StartCoroutine(Incubate());
+        GameObject gameMaster = GameObject.FindGameObjectWithTag("GameMaster");
+        score = gameMaster.GetComponent<Score>();
     }
 
     void Update ()
@@ -100,6 +104,7 @@ public class EggBehavior : MonoBehaviour {
         if (canBeDestroyed)
         {
             SoundManagerScript.PlaySound("portal");
+            score.EggThrownBack();
             DestroyObject(this.gameObject);
         }
     }

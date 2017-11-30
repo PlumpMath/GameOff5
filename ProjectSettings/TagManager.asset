@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Alien
+  - GameMaster
   layers:
   - Default
   - TransparentFX
