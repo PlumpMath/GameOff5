@@ -7,7 +7,8 @@ public class EggBehavior : MonoBehaviour {
     public float timeTillWalk = 5.0f;
     public float timeTillHatch = 10.0f;
     public float eggSpeed = 2.0f;
-    public float launchSpeed = 5.0f;
+    public float minLaunchSpeed = 400f;
+    public float maxLaunchSpeed = 700f;
     public GameObject eggSplatter;
     public GameObject alien;
 
@@ -25,7 +26,8 @@ public class EggBehavior : MonoBehaviour {
         float launchYDirection = Random.Range(1, 10);
         Vector2 launchDirection = new Vector2(-launchXDirection, launchYDirection);
         launchDirection.Normalize();
-        rigidBody.AddForce(launchDirection * launchSpeed);
+        float randForce = Random.Range(minLaunchSpeed, maxLaunchSpeed);
+        rigidBody.AddForce(launchDirection * randForce);
         StartCoroutine(Incubate());
     }
 
