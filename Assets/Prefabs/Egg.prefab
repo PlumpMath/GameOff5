@@ -116,7 +116,8 @@ MonoBehaviour:
   timeTillWalk: 4
   timeTillHatch: 5
   eggSpeed: 2
-  launchSpeed: 500
+  minLaunchSpeed: 400
+  maxLaunchSpeed: 700
   eggSplatter: {fileID: 1402588181175762, guid: b03e0c206e869dd4f8737876e939f207,
     type: 2}
   alien: {fileID: 1604839009978540, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
