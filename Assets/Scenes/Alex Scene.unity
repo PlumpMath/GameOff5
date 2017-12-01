@@ -268,7 +268,7 @@ RectTransform:
   - {fileID: 652032088}
   - {fileID: 187784468}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -303,53 +303,6 @@ Transform:
   m_Father: {fileID: 1485629461}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &152630958
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 6.841
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -5.489
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946592016068796, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114745751096066114, guid: ce18b82be3a39414ba670a643b13d105,
-        type: 2}
-      propertyPath: gameMaster
-      value: 
-      objectReference: {fileID: 407232079}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ce18b82be3a39414ba670a643b13d105, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &187784467
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 187784468}
   m_Layer: 5
-  m_Name: AliensKilledUI (2)
+  m_Name: EggsThrownBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,11 +333,11 @@ RectTransform:
   m_Father: {fileID: 81543636}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 144.6, y: 97}
-  m_Pivot: {x: 1, y: 1}
+  m_SizeDelta: {x: 144.59998, y: 97}
+  m_Pivot: {x: 0, y: 1}
 --- !u!1 &317988219
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +892,7 @@ GameObject:
   - component: {fileID: 922645885}
   - component: {fileID: 922645884}
   m_Layer: 5
-  m_Name: AliensKilledImage
+  m_Name: EggsThrownBackImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -982,7 +935,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5386545d83bdd9343b86c5c0b111e50c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7e719419c7003e8459918e6838496f18, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1074,7 +1027,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &957224357
 GameObject:
@@ -1404,7 +1357,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1095898952
 Prefab:
@@ -1443,7 +1396,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4259763057026296, guid: cda979a49ed21e94b9eb8c16bcee18ac, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cda979a49ed21e94b9eb8c16bcee18ac, type: 2}
@@ -1505,7 +1458,7 @@ GameObject:
   - component: {fileID: 1181977073}
   - component: {fileID: 1181977072}
   - component: {fileID: 1181977071}
-  - component: {fileID: 1181977070}
+  - component: {fileID: 1181977074}
   m_Layer: 5
   m_Name: AliensEscapedText
   m_TagString: Untagged
@@ -1531,17 +1484,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000015258789, y: -32.3}
   m_SizeDelta: {x: 144.6, y: 32.4}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1181977070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1181977068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f98cc87b0ff8a4d4387b1c5680850212, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1181977071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1579,7 +1521,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: dc2e378dd89687045884b540c7c482af, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 1
@@ -1588,13 +1530,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Aliens Killed: 0'
+  m_Text: 'Aliens Escaped: 0'
 --- !u!222 &1181977073
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1181977068}
+--- !u!114 &1181977074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1181977068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dba2d087ce8cb4291be33e7363e97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1185124844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,7 +1655,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1328426149
 GameObject:
@@ -5291,7 +5244,7 @@ Transform:
   m_LocalScale: {x: 0.10777263, y: 0.10777266, z: 0.10777266}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1666041057
 GameObject:
@@ -5347,7 +5300,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5386545d83bdd9343b86c5c0b111e50c, type: 3}
+  m_Sprite: {fileID: 21300006, guid: b5fbb307be4552d41b75a5f18619c9f5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5409,7 +5362,7 @@ GameObject:
   - component: {fileID: 2024515088}
   - component: {fileID: 2024515087}
   m_Layer: 5
-  m_Name: AliensKilledText
+  m_Name: EggsThrownBackText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5441,7 +5394,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2024515085}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f98cc87b0ff8a4d4387b1c5680850212, type: 3}
+  m_Script: {fileID: 11500000, guid: aa77bc8d2262c0a41a4e1e161b7fab74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2024515088
@@ -5481,7 +5434,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: dc2e378dd89687045884b540c7c482af, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 1
@@ -5490,7 +5443,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Aliens Killed: 0'
+  m_Text: 'Eggs Thrown Back: 0'
 --- !u!222 &2024515090
 CanvasRenderer:
   m_ObjectHideFlags: 0
