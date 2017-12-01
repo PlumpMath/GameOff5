@@ -72,6 +72,10 @@ public class AlienBehavior : MonoBehaviour {
         if (random <= 0.5)
         {
             speed *= -1;
+            if (speed < 0)
+                transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+            else
+                transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
     }
 

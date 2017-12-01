@@ -11,8 +11,9 @@ public class EggBehavior : MonoBehaviour {
     public float minLaunchSpeed = 400f;
     public float maxLaunchSpeed = 700f;
     public GameObject eggSplatter;
-    public GameObject alien;
+    public GameObject[] aliens;
 
+    private GameObject alien;
     private Rigidbody2D rigidBody;
     private bool walking = false;
     private bool onGround = true;
@@ -22,6 +23,7 @@ public class EggBehavior : MonoBehaviour {
 
     void Start()
     {
+        alien = aliens[Random.Range(0, 2)];
         rigidBody = GetComponent<Rigidbody2D>();
         groundLayerMask = LayerMask.GetMask("Ground");
         float launchXDirection = Random.Range(1, 10);
@@ -37,6 +39,7 @@ public class EggBehavior : MonoBehaviour {
 
     void Update ()
     {
+
         checkIfGrounded();
         determineWalkDirection();
     }
