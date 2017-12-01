@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour {
 	
 	void Update () {
         applyFallMultiplier();
+        if (Input.GetKey("escape"))
+            Application.Quit();
     }
 
     void FixedUpdate()

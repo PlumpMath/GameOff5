@@ -9,4 +9,10 @@ public class LoadScene : MonoBehaviour {
     {
         SceneManager.LoadScene(sceneIndex);
     }
+
+    void Update()
+    {
+        if (Input.GetKey("escape"))
+            Application.Quit();
+    }
 }
