@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour {
     public static AudioClip grunt, pop, squish, portal;
-    static AudioSource audioSrc;
+    public static AudioSource audioSrc;
+    public AudioSource songSrc;
+    public static float songVolume;
+    public static float masterVolume;
 	// Use this for initialization
 	void Start () {
         grunt = Resources.Load<AudioClip>("grunt");
@@ -12,8 +15,11 @@ public class SoundManagerScript : MonoBehaviour {
         squish = Resources.Load<AudioClip>("squish");
         portal = Resources.Load<AudioClip>("portal");
 
-        audioSrc = GetComponent<AudioSource>();
-		
+        audioSrc = GetComponents<AudioSource>()[0];
+        audioSrc.volume = masterVolume;
+        songSrc.volume = songVolume;
+        songSrc.Play();
+
 	}
 	
 	// Update is called once per frame
