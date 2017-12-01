@@ -6,8 +6,8 @@ public class SoundManagerScript : MonoBehaviour {
     public static AudioClip grunt, pop, squish, portal;
     public static AudioSource audioSrc;
     public AudioSource songSrc;
-    public static float songVolume;
-    public static float masterVolume;
+    public static float songVolume = 1;
+    public static float masterVolume = 1;
 	// Use this for initialization
 	void Start () {
         grunt = Resources.Load<AudioClip>("grunt");

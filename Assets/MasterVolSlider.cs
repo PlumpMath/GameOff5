@@ -14,8 +14,6 @@ public class MasterVolSlider : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(slider.value);
-        //SoundManagerScript.audioSrc.volume = slider.value;
-        SoundManagerScript.masterVolume = 0.1f;
+        SoundManagerScript.masterVolume = slider.value;
     }
 }
